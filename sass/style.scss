@@ -59,48 +59,94 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 /* Normalize
 --------------------------------------------- */
-@import "generic/normalize";
+// @import "generic/normalize";
 
 /* Box sizing
 --------------------------------------------- */
 @import "generic/box-sizing";
 
 // @import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
-@import "../scss/mdb-free.scss";
+// @import "../node_modules/bootstrap/scss/bootstrap.scss";
+// @import "../scss/mdb-free.scss";
+// @import "../node_modules/materialize-css/sass/materialize.scss";
+// Color
+@import "../node_modules/materialize-css/sass/components/color-variables";
+@import "../node_modules/materialize-css/sass/components/color-classes";
 
-// /*--------------------------------------------------------------
-// # Base
-// --------------------------------------------------------------*/
-// @import "base/base";
+// Variables;
+@import "./variables";
 
-// /*--------------------------------------------------------------
-// # Layouts
-// --------------------------------------------------------------*/
-// // @import "layouts/content-sidebar"; // Uncomment this line for a sidebar on right side of your content.
-// // @import "layouts/sidebar-content"; // Uncomment this line for a sidebar on left side of your content.
+// Reset
+@import "../node_modules/materialize-css/sass/components/normalize";
 
-// /*--------------------------------------------------------------
-// # Components
-// --------------------------------------------------------------*/
-// @import "components/components";
+// components
+@import "../node_modules/materialize-css/sass/components/global";
+@import "../node_modules/materialize-css/sass/components/badges";
+@import "../node_modules/materialize-css/sass/components/icons-material-design";
+@import "../node_modules/materialize-css/sass/components/grid";
+@import "../node_modules/materialize-css/sass/components/navbar";
+@import "../node_modules/materialize-css/sass/components/typography";
+@import "../node_modules/materialize-css/sass/components/transitions";
+@import "../node_modules/materialize-css/sass/components/cards";
+@import "../node_modules/materialize-css/sass/components/toast";
+@import "../node_modules/materialize-css/sass/components/tabs";
+@import "../node_modules/materialize-css/sass/components/tooltip";
+@import "../node_modules/materialize-css/sass/components/buttons";
+@import "../node_modules/materialize-css/sass/components/dropdown";
+@import "../node_modules/materialize-css/sass/components/waves";
+@import "../node_modules/materialize-css/sass/components/modal";
+@import "../node_modules/materialize-css/sass/components/collapsible";
+@import "../node_modules/materialize-css/sass/components/chips";
+@import "../node_modules/materialize-css/sass/components/materialbox";
+@import "../node_modules/materialize-css/sass/components/forms/forms";
+@import "../node_modules/materialize-css/sass/components/table_of_contents";
+@import "../node_modules/materialize-css/sass/components/sidenav";
+@import "../node_modules/materialize-css/sass/components/preloader";
+@import "../node_modules/materialize-css/sass/components/slider";
+@import "../node_modules/materialize-css/sass/components/carousel";
+@import "../node_modules/materialize-css/sass/components/tapTarget";
+@import "../node_modules/materialize-css/sass/components/pulse";
+@import "../node_modules/materialize-css/sass/components/datepicker";
+@import "../node_modules/materialize-css/sass/components/timepicker";
 
-// /*--------------------------------------------------------------
-// # Plugins
-// --------------------------------------------------------------*/
+nav h1.brand-logo {
+	margin: 15px;
+}
 
-// /* Jetpack infinite scroll
-// --------------------------------------------- */
-// @import "plugins/jetpack/infinite-scroll";
+nav p.brand-logo {
+	margin: 0 0 0 15px;
+}
 
-// /*--------------------------------------------------------------
-// # Utilities
-// --------------------------------------------------------------*/
+.navbar-fixed nav {
+  background-color: color("grey", "lighten-5");
+}
 
-// /* Accessibility
-// --------------------------------------------- */
-// @import "utilities/accessibility";
+.sidenav ul,
+.page-footer ul ul {
+	margin-top: .75em;
+	padding-left: 2em;
+}
 
-// /* Alignments
-// --------------------------------------------- */
-// @import "utilities/alignments";
+.page-footer li {
+	margin-bottom: .75em;
+}
+
+.video-container {
+
+	@media #{$small-and-down} {
+		padding-bottom: 70%;
+	}
+	@media #{$large-and-up} {
+		padding-bottom: 30%;
+  }
+}
+
+.video-container video {
+	position: absolute;
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+

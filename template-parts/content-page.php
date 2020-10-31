@@ -16,7 +16,7 @@
 
 	<?php hardolass_post_thumbnail(); ?>
 
-	<div class="entry-content">
+	<div class="entry-content ">
 		<?php
 		the_content();
 
