@@ -16,7 +16,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 	<?php wp_head(); ?>
@@ -26,11 +26,11 @@
 <?php wp_body_open(); ?>
 <div id="wrapper" class="">
 	
-	<div class="navbar-fixed">
+	<div id="header" class="navbar-fixed">
 		<nav>
 			<div class="nav-wrapper">
 				<?php
-					$logoTag = '<img src="' . get_template_directory_uri() . '/img/hardolass-logo_RGB.svg" alt="" width="210" />';
+					$logoTag = '<img src="' . get_template_directory_uri() . '/img/hardolass-logo_RGB.svg" alt="" width="180" />';
 
 					if ( is_front_page() && is_home() ) :
 						?>
@@ -43,13 +43,12 @@
 					endif;
 				?>
 
-				<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+				<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">notes</i></a>
 				<ul class="right hide-on-med-and-down">
-					<li><a href="/">Home</a></li>
-					<li><a href="/products/" class="dropdown-trigger" data-target="dropdown1">製品情報<i class="material-icons right">arrow_drop_down</i></a></li>
-					<li><a href="/company/" class="dropdown-trigger" data-target="dropdown2">会社情報<i class="material-icons right">arrow_drop_down</i></a></li>
-					<li><a href="/news/">NEWS</a></li>
-					<li><a href="/contact/" class="waves-effect waves-light btn btn-secondary">問い合わせ</a></li>
+					<li><a href="/products/" class="dropdown-trigger" data-target="dropdown1">製品情報<i class="material-icons right">keyboard_arrow_down</i></a></li>
+					<li><a href="/market/" class="dropdown-trigger" data-target="dropdown2">業界別アプリケーション<i class="material-icons right">keyboard_arrow_down</i></a></li>
+					<li><a href="/company/" class="dropdown-trigger" data-target="dropdown3">会社情報<i class="material-icons right">keyboard_arrow_down</i></a></li>
+					<li><a href="/contact/" class="waves-effect waves-light btn btn-secondary">お問い合わせ</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -61,11 +60,20 @@
 		<li><a href="/products/dr-hardolass/">Dr.ハドラス</a></li>
 	</ul>
 	<ul id="dropdown2" class="dropdown-content">
-		<li><a href="/company/mission/">私たちのミッション</a></li>
+		<li><a href="/market/transportation/">自動車・輸送用機器</a></li>
+		<li><a href="/market/mobile/">携帯電話</a></li>
+		<li><a href="/market/solar-panel/">ソーラーパネル</a></li>
+		<li><a href="/market/watches-glasses/">時計・メガネ</a></li>
+		<li><a href="/market/jewelry/">宝石・貴金属</a></li>
+		<li><a href="/market/hobby/">ホビー</a></li>
+		<li><a href="/market/construction-housing/">建設・住宅</a></li>
+	</ul>
+	<ul id="dropdown3" class="dropdown-content">
+		<li><a href="/company/mission/">ミッション</a></li>
 		<li><a href="/company/profile/">会社概要</a></li>
 		<li><a href="/company/events/">イベント情報</a></li>
 		<li><a href="/company/honor/">受賞歴</a></li>
-		<li><a href="/company/link/">関連リンク</a></li>
+		<!-- <li><a href="/company/link/">関連リンク</a></li> -->
 	</ul>
 
   <ul class="sidenav" id="mobile-demo">
@@ -78,17 +86,29 @@
 			</ul>
 		</li>
 		<li>
+			<a href="/market/">業界別アプリケーション</a>
+			<ul>
+				<li><a href="/market/transportation/">自動車・輸送用機器</a></li>
+				<li><a href="/market/mobile/">携帯電話</a></li>
+				<li><a href="/market/solar-panel/">ソーラーパネル</a></li>
+				<li><a href="/market/watches-glasses/">時計・メガネ</a></li>
+				<li><a href="/market/jewelry/">宝石・貴金属</a></li>
+				<li><a href="/market/hobby/">ホビー</a></li>
+				<li><a href="/market/construction-housing/">建設・住宅</a></li>
+			</ul>
+		</li>
+		<li>
 			<a href="/company/">会社情報</a>
 			<ul>
-				<li><a href="/company/mission/">私たちのミッション</a></li>
+				<li><a href="/company/mission/">ミッション</a></li>
 				<li><a href="/company/profile/">会社概要</a></li>
 				<li><a href="/company/events/">イベント情報</a></li>
 				<li><a href="/company/honor/">受賞歴</a></li>
-				<li><a href="/company/link/">関連リンク</a></li>
+				<!-- <li><a href="/company/link/">関連リンク</a></li> -->
 			</ul>
 		</li>
 		<li><a href="/news/">NEWS</a></li>
-		<li><a href="/contact/">問い合わせ</a></li>
+		<li><a href="/contact/">お問い合わせ</a></li>
   </ul>
 
 	<header id="masthead" class="site-header">
